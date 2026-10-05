@@ -20,4 +20,5 @@ curl -L "https://dl-cdn.alpinelinux.org/alpine/v${ALPINE_VERSION}/releases/${ARC
     -o "$DOWNLOAD_DIR/alpine-rootfs.tar.gz"
 
 echo "Done! Files saved to $DOWNLOAD_DIR"
-ls -la "$DOWNLOAD_DIR"
+ls -la "$DOWNLO
+AD_DIR"
