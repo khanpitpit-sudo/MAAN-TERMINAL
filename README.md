@@ -1,20 +1,34 @@
-# MAAN-TERMINAL ULTIMATE - Full Color + Curses + Vim/Nano + ExtraKeys + Proot Ubuntu
+# MaAn Terminal
+
+Complete Android terminal emulator with Android Shell + Linux (proot) support.
 
 ## Features
-- Proot Ubuntu 22.04 auto-download (35MB)
-- ExtraKeys: ESC,TAB,CTRL,Arrows,HOME,END,PGUP,PGDN
-- VIM/NANO support via PTY + .vimrc/.nanorc auto setup
-- Full Color: xterm-256color + TrueColor 24-bit + 256 colors
-- Curses: htop, tmux, nmtui, alsamixer all work
-- Mouse tracking in vim/htop
+- Android Shell (no root)
+- Linux Shell via proot + Alpine
+- Jetpack Compose UI, Material 3
+- Keyboard toolbar: TAB, CTRL, ESC, arrows, CTRL+C/D/L/Z
+- Dark green-on-black theme
 
-## Build
-1. bash scripts/download_proot.sh
-2. Open in Android Studio, Build APK
+## Build on Phone (SmartIDE)
+1. Install SmartIDE from Play Store
+2. Clone: https://github.com/khanpitpit-sudo/MAAN-TERMINAL
+3. Switch branch: feature/complete-android-project
+4. Run scripts/download_proot.sh
+4. Sync Gradle → Build → Assemble Debug APK
 
-## Activities
-- FullColorTerminalActivity - Main launcher, full color + curses
-- VimTerminalActivity - Vim focused
-- MainActivity - Basic
+## Build on PC (Android Studio)
+```bash
+git clone https://github.com/khanpitpit-sudo/MAAN-TERMINAL
+cd MAAN-TERMINAL
+git checkout feature/complete-android-project
+bash scripts/download_proot.sh
+./gradlew assembleDebug
+```
 
-All source in app/src/main/java/com/maandev/terminal/
+## Requirements
+- Android 8.0+ (API 26)
+- Storage permission
+- Internet for proot/Alpine (~35 MB)
+
+## Package
+com.maan.terminal
